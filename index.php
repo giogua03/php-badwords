@@ -12,12 +12,12 @@
         «suoni e visioni» e mantenendo intatta la suggestione delle parole. In questo senso, la serie di Harry Potter ha comportato scelte editoriali molto delicate.
         In Harry Potter i nomi di persone o di luoghi contengono quasi sempre
         un allusione, una parodia, un gioco di parole. Molto spesso è stata mantenuta la forma inglese, perché più evocativa e immediata; altre volte si è
-        scelta una traduzione che ricalcasse il significato dell originale o privilegiasse l assonanza; altre ancora un interpretazione che rendesse la suggestione comica o fiabesca o quotidiana del contesto. '
+        scelta una traduzione che ricalcasse il significato dell originale o privilegiasse l assonanza; altre ancora un interpretazione che rendesse la suggestione comica o fiabesca o quotidiana del contesto. ';
         $testoCens = str_ireplace($_GET['censura'], '***', $texto);
         $lunga = strlen($testoCens);
     ?>
 
-    <p><?= $testoCensurato ?></p>
+    <p><?= $testoCens?></p>
     <form method="GET" action="">
         <label for="parolaCens">Scrivi la parola da censurare</label>
         <input type="text" id="parolaCens" name="censura">
