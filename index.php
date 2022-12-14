@@ -8,22 +8,18 @@
 </head>
 <body>
     <?php
-    $texto = 'La traduzione di un libro tocca corde sensibilissime nel cuore e nella mente dei lettori: si tratta di passare da una lingua all altra rispettandone
-        «suoni e visioni» e mantenendo intatta la suggestione delle parole. In questo senso, la serie di Harry Potter ha comportato scelte editoriali molto delicate.
-        In Harry Potter i nomi di persone o di luoghi contengono quasi sempre
-        un allusione, una parodia, un gioco di parole. Molto spesso è stata mantenuta la forma inglese, perché più evocativa e immediata; altre volte si è
-        scelta una traduzione che ricalcasse il significato dell originale o privilegiasse l assonanza; altre ancora un interpretazione che rendesse la suggestione comica o fiabesca o quotidiana del contesto. ';
-        $testoCens = str_ireplace($_GET['censura'], '***', $texto);
-        $lunga = strlen($testoCens);
+    $testo = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis adipisci distinctio doloremque quibusdam est perspiciatis, eos, qui dolorum veritatis, aliquid consequatur veniam pariatur ullam consequuntur deleniti nihil sed quod magni!';
+    $testoCens = str_ireplace($_GET['badword'], '***', $testo);
+    $lunga = strlen($testoCens);
     ?>
 
-    <p><?= $testoCens?></p>
+    <p><?= $testoCens ?></p>
     <form method="GET" action="">
         <label for="parolaCens">Scrivi la parola da censurare</label>
-        <input type="text" id="parolaCens" name="censura">
-        <button>censura con ***</button>
+        <input type="text" id="parolaCens" name="badword">
+        <button>Censura!</button>
     </form>
-    <span>Lunghezza : </span>
+    <span>Lunghezza paragrafo: </span>
     <span><?= $lunga ?> caratteri.</span>
 </body>
 </html>
